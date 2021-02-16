@@ -1,46 +1,101 @@
-.debug div{
+/* .debug div{
   min-height: 100px;
   width: 100%;
   border: 1px solid green;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 .p_h30{
   padding: 30px 0;
 }
 
+/* SEZIONE 1 Customers Sories */
 #customers_stories{
   background-color: #f3f5f9;
 }
 
-.flex_container{
-  width: 90%;
-  margin: 0 auto;
-  display:flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 #customers_stories h6{
-  font-weight: 500;
+  font-weight: 600;
   color: #5c6a88;
 }
 
-.customers_logo{
-  width: 100%;
-  display: flex;
+#customers_stories .flex_container{
+  width: 90%;
+  margin: 0 auto;
+  display:flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.customers_logo > img{
-  width: calc( ( 100% / 6 ) - 30px );
+#customers_stories .flex_container > .customers_logo{
+  flex-basis: calc( ( 100% / 6 ) - 30px );
 }
 
-.customers_logo > img:not(:last-child){
+.customers_logo:not(:last-child){
   margin-right: 30px;
 }
-@media screen and (max-width:568px) {
-  .customers_logo > img{
-    width: calc( 50% - 30px );
+
+@media screen and (max-width: 568px){
+  #customers_stories .flex_container > .customers_logo{
+    flex-basis: calc( 50% - 30px );
   }
 }
+/* /SEZIONE 1 Customers Sories */
+/* SEZIONE 2 Deploy */
+.deploy_title{
+  text-align: center;
+  padding: 30px;
+}
+
+#deploy .flex_container{
+  width: 70%;
+  margin: 0 auto;
+  display:flex;
+}
+
+.deploy_nav{
+  flex-basis: 30%;
+}
+
+.deploy_list li{
+  padding: 15px 0 15px 10px;
+}
+
+.deploy_main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 70%;
+}
+
+.deploy_main > .deploy_steps{
+  flex-basis: 50%;
+  padding: 0 30px 30px 0;
+}
+
+#deploy h2{
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px 0 30px;
+  color: #031c4e;
+}
+
+#deploy h5{
+  color: #031c4e;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px 0 10px;
+}
+
+#deploy {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 568px) {
+  #deploy .flex_container, .deploy_main{
+    display: block;
+  }
+}
+
+/* /SEZIONE 2 Deploy */
